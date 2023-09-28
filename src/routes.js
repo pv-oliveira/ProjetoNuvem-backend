@@ -9,7 +9,7 @@ const OrderController = require('./controller/pedido');
 //Rotas para criar usuário e fazer login
 routes.post("/auth/login", UserController.createSession);
 routes.post("/auth/register", UserController.registerUser);
-// routes.get("/auth/getUsers", UserController.getUsers);
+routes.get("/auth/getUsers", UserController.getUsers);
 
 //Rotas para criar, listar, atualizar e deletar clientes
 routes.post("/client/create", UserController.checkToken, ClientController.createClient);

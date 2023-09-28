@@ -108,4 +108,18 @@ module.exports = {
       res.status(400).json({ message: "token inválido" });
     }
   },
+
+  async getUsers(req, res) {
+    const { email, password } = req.body;
+    
+    try{
+      const clientesTeste = [
+        "Paulo", "Pedro", "David", "Victor"
+      ]
+
+      return res.status(200).json( clientesTeste );
+    } catch (error) {
+      res.status(500).json({ message: error });
+    }
+  },
 };
